@@ -1,0 +1,17 @@
+{% load static %}
+
+<!-- Con esto cargo el file que usaré para estilizar la wea; en este caso, el custom que me defini ahi-->
+<link rel="stylesheet" type="text/css" href="{% static 'forms/style.css' %}">
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+{% if latest_question_list %}
+<ul>
+    {% for question in latest_question_list %}
+    <li><a href="{% url 'forms:detail' question.id %}">{{ question.question_text }}</a></li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No forms are available.</p>
+{% endif %}
