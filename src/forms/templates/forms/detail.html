@@ -1,16 +1,54 @@
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<!DOCTYPE html>
+<html lang="fr">
 
-{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+{% load static %}
+
+<head>
+    <title>CMIX</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'forms/index.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<header>
+    <script src="{% static 'js/navbar_shrink.js' %}"></script>
+    <div class="menu-toggle" id="hamburger">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="overlay"></div>
+    <div class="container">
+        <nav id="navbar">
+            <a id='short' href='/'><img src="{% static 'img/logocmix.png' %}" class="logo" id="logo"></a>
+            <!--<img src="{% static 'img/logocmix.png' %}" class="logo" id="logo">-->
+            <ul>
+                <li><a href="/presta/contact/">Demander une presta</a></li>
+                <li><a href="#">Open events</a></li>
+                <li><a href="/forms/">Medias</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<body>
+    <script src="{% static 'js/body_fade.js' %}"></script>
+    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
 
-<h1>{{ question.question_text }}</h1>
+    <h1>{{ question.question_text }}</h1>
 
-<form action="{% url 'forms:vote' question.id %}" method="post">
-    {% csrf_token %}
-    {% for choice in question.choice_set.all %}
-    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
-    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
-    {% endfor %}
-    <input type="submit" value="Vote">
-</form>
+    <form action="{% url 'forms:vote' question.id %}" method="post">
+        {% csrf_token %}
+        {% for choice in question.choice_set.all %}
+        <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+        <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
+        {% endfor %}
+        <input type="submit" value="Vote">
+    </form>
+    <div class="col">
+        <!-- On a la place de mettre une autre boite de texte sur le coté-->
+    </div>
+    </div>
+</body>
+
+</html>
