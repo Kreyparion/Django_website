@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+{% load static %}
+
+<head>
+    <title>CMIX</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<header>
+    <script src="{% static 'js/navbar_shrink.js' %}"></script>
+    <div class="menu-toggle" id="hamburger">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="overlay"></div>
+    <div class="container">
+        <nav id="navbar">
+            <img src="{% static 'img/logocmix.png' %}" class="logo" id="logo">
+            <ul>
+                <li><a href="/presta/contact/">Demander une presta</a></li>
+                <li><a href="#">Open events</a></li>
+                <li><a href="/forms/">Medias</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<body>
+    <script src="{% static 'js/body_fade.js' %}"></script>
+    <div class="row">
+        <div class="col">
+            <h1>CMIX</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="form-actions">
+                    <button type="submit">Send</button>
+                </div>
+            </form>
+
+        </div>
+        <div class="col">
+            <!-- On a la place de mettre une autre boite de texte sur le coté-->
+        </div>
+    </div>
+</body>
+
+</html>

@@ -21,4 +21,5 @@ urlpatterns = [
     path('', views.home_view, name='home'),
     path('admin/', admin.site.urls),
     path('forms/', include('forms.urls')),
+    path('presta/', include('presta.urls')),
 ]
