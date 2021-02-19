@@ -9,4 +9,5 @@ app_name = 'presta'
 urlpatterns = [
     path('contact/', views.contactView, name='contact'),
     path('success/', views.successView, name='success'),
+    path('name/', views.get_name, name='name')
 ]
