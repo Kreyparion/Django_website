@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   {% load static %}
   <title>CMIX</title>
@@ -11,28 +12,30 @@
 <header>
   <script src="{% static 'js/navbar_shrink.js' %}"></script>
   <div class="menu-toggle" id="hamburger">
-      <i class="fas fa-bars"></i>
+    <i class="fas fa-bars"></i>
   </div>
   <div class="overlay"></div>
   <div class="container">
-      <nav id="navbar">
-          <img src="{% static 'img/logocmix.png' %}" class="logo" id="logo">
-          <ul>
-              <li><a href="#">Demander une presta</a></li>
-              <li><a href="#">Open events</a></li>
-              <li><a href="#">Medias</a></li>
-              <li><a href="#">Login</a></li>
-          </ul>
-      </nav>
+    <nav id="navbar">
+      <img src="{% static 'img/logocmix.png' %}" class="logo" id="logo">
+      <ul>
+        <li><a href="/presta/contact/">Demander une presta</a></li>
+        <li><a href="#">Open events</a></li>
+        <li><a href="/forms/">Medias</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
+
 <body>
   <script src="{% static 'js/body_fade.js' %}"></script>
   <div class="row">
     <div class="col">
       <h1>CMIX</h1>
       <p>L'association de DJs, producteurs et ambianceurs de CentraleSupélec</p>
-      <p>Que ce soit pour vos events associatifs, vos soirées en rez 2 ou vos apéros de campagne, nous sommes là pour vous proposer des sessions de mix réalisées sur mesure pour ambiancer au mieux vos soirées.</p>
+      <p>Que ce soit pour vos events associatifs, vos soirées en rez 2 ou vos apéros de campagne, nous sommes là pour
+        vous proposer des sessions de mix réalisées sur mesure pour ambiancer au mieux vos soirées.</p>
       <p>1</p>
       <p>2</p>
       <p>3</p>
@@ -115,8 +118,9 @@
       <p>20</p>
     </div>
     <div class="col">
-        <!-- On a la place de mettre une autre boite de texte sur le coté-->
+      <!-- On a la place de mettre une autre boite de texte sur le coté-->
     </div>
   </div>
 </body>
+
 </html>
