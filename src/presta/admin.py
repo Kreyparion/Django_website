@@ -10,7 +10,7 @@ class PrestaAdmin(admin.ModelAdmin):
         ('Published', {'fields': [
          'pub_date'], 'classes': ['collapse']}),
         ('Event information', {'fields': [
-         'presta_type', 'presta_date', 'presta_respo', 'presta_respo_mail']}),
+         'presta_type', 'presta_date', 'presta_end', 'presta_respo', 'presta_respo_mail']}),
     ]
     list_display = ('presta_name', 'presta_date',
                     'presta_type', 'presta_respo', 'pub_date')

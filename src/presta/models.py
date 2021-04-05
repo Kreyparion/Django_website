@@ -1,6 +1,7 @@
 import datetime
 from django.db import models
 from django.utils import timezone
+from datetime import datetime
 
 TYPE_CHOICES = [
     ('FP', 'FP'),
@@ -15,7 +16,9 @@ class Presta(models.Model):
     presta_respo = models.CharField(max_length=200)
     presta_respo_mail = models.EmailField('email respo')
     presta_date = models.DateTimeField('date of presta')
-    pub_date = models.DateTimeField('date published')
+    presta_end = models.DateTimeField('end of presta')
+    pub_date = models.DateTimeField(
+        'date published', default=datetime.now)
 
     def __str__(self):
         return self.presta_name
