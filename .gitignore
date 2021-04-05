@@ -1,1 +1,4 @@
-__pycache__
+# created by virtualenv automatically
+
+src/cmix/__pycache__
+src/presta/__pycache__/
