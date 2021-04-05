@@ -82,7 +82,7 @@ def vote(request, question_id):
         selected_choice = question.choice_set.get(pk=request.POST['choice'])
     except (KeyError, Choice.DoesNotExist):
         # Muestra de nuevo la forma pa votar, si no elegí opcion alguna (y por tanto, request.POST['choice'] no tiene nada
-        return render(request, 'forms/detail.html', {'question': question, 'error_message': "No elegiste ninguna alternativa"})
+        return render(request, 'forms/detail.html', {'question': question, 'error_message': "Vous n'avez selectionné aucun choix"})
     else:
         # lidiamos con lo que significa este input (dado por el POST data)
         # F lo opera directo desde la db

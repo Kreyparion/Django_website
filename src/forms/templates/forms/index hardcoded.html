@@ -1,7 +1,9 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
 {% if latest_question_list %}
 <ul>
     {% for question in latest_question_list %}
-    <li><a href="/forms/{{ question.id }}/">{{ question.question_text }}</a></li>
+    <li><a href="/forms/{{ question.id }}/">{{ question.question_text }}<br></a></li>
     {% endfor %}
 </ul>
 {% else %}
