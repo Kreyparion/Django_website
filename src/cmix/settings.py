@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 print(BASE_DIR)
@@ -25,7 +25,7 @@ SECRET_KEY = '%uy3)n6m*yz88i4olr1yb+lmf658l#&-#5nye*ukhy*+r8v!nm'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [] #['cmix.fr', '127.0.0.1']
 
 
 # Application definition
@@ -120,6 +120,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # this is the static files folder name which you created in django project root folder. This is different from above STATIC_URL. 
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 STATICFILES_DIRS = [
     str(BASE_DIR)+'\static',
 ]
