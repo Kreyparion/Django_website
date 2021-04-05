@@ -7,10 +7,13 @@ from .models import Presta
 class PrestaAdmin(admin.ModelAdmin):
     fieldsets = [
         (None,               {'fields': ['presta_name']}),
-        ('Date information', {'fields': [
-         'pub_date', 'presta_date'], 'classes': ['collapse']}),
+        ('Published', {'fields': [
+         'pub_date'], 'classes': ['collapse']}),
+        ('Event information', {'fields': [
+         'presta_type', 'presta_date', 'presta_respo', 'presta_respo_mail']}),
     ]
-    list_display = ('presta_name', 'presta_date', 'pub_date')
+    list_display = ('presta_name', 'presta_date',
+                    'presta_type', 'presta_respo', 'pub_date')
     list_filter = ['presta_date']
     search_fields = ['presta_name']
 

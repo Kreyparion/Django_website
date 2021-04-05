@@ -1,126 +1,87 @@
-<!DOCTYPE html>
-<html lang="fr">
+{% extends 'base.html' %}
 
-<head>
-  {% load static %}
-  <title>CMIX</title>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="{% static 'css/index.css' %}">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-</head>
-<header>
-  <script src="{% static 'js/navbar_shrink.js' %}"></script>
-  <div class="menu-toggle" id="hamburger">
-    <i class="fas fa-bars"></i>
-  </div>
-  <div class="overlay"></div>
-  <div class="container">
-    <nav id="navbar">
-      <img src="{% static 'img/logocmix.png' %}" class="logo" id="logo">
-      <ul>
-        <li><a href="/presta/name/">Demander une presta</a></li>
-        <li><a href="">Réseaux</a></li>
-        <li><a href="/presta/contact/">Médias</a></li>
-        <li><a href="">Playlist</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<body>
-  <script src="{% static 'js/body_fade.js' %}"></script>
-  <div class="row">
-    <div class="col">
-      <h1>CMIX</h1>
-      <p>L'association de DJs, producteurs et ambianceurs de CentraleSupélec</p>
-      <p>Que ce soit pour vos events associatifs, vos soirées en rez 2 ou vos apéros de campagne, nous sommes là pour
-        vous proposer des sessions de mix réalisées sur mesure pour ambiancer au mieux vos soirées.</p>
-      <p>1</p>
-      <p>2</p>
-      <p>3</p>
-      <p>4</p>
-      <p>5</p>
-      <p>6</p>
-      <p>7</p>
-      <p>8</p>
-      <p>9</p>
-      <p>10</p>
-      <p>11</p>
-      <p>12</p>
-      <p>13</p>
-      <p>14</p>
-      <p>15</p>
-      <p>16</p>
-      <p>17</p>
-      <p>18</p>
-      <p>19</p>
-      <p>20</p>
-      <p>1</p>
-      <p>2</p>
-      <p>3</p>
-      <p>4</p>
-      <p>5</p>
-      <p>6</p>
-      <p>7</p>
-      <p>8</p>
-      <p>9</p>
-      <p>10</p>
-      <p>11</p>
-      <p>12</p>
-      <p>13</p>
-      <p>14</p>
-      <p>15</p>
-      <p>16</p>
-      <p>17</p>
-      <p>18</p>
-      <p>19</p>
-      <p>20</p>
-      <p>1</p>
-      <p>2</p>
-      <p>3</p>
-      <p>4</p>
-      <p>5</p>
-      <p>6</p>
-      <p>7</p>
-      <p>8</p>
-      <p>9</p>
-      <p>10</p>
-      <p>11</p>
-      <p>12</p>
-      <p>13</p>
-      <p>14</p>
-      <p>15</p>
-      <p>16</p>
-      <p>17</p>
-      <p>18</p>
-      <p>19</p>
-      <p>20</p>
-      <p>1</p>
-      <p>2</p>
-      <p>3</p>
-      <p>4</p>
-      <p>5</p>
-      <p>6</p>
-      <p>7</p>
-      <p>8</p>
-      <p>9</p>
-      <p>10</p>
-      <p>11</p>
-      <p>12</p>
-      <p>13</p>
-      <p>14</p>
-      <p>15</p>
-      <p>16</p>
-      <p>17</p>
-      <p>18</p>
-      <p>19</p>
-      <p>20</p>
-    </div>
-    <div class="col">
-      <!-- On a la place de mettre une autre boite de texte sur le coté-->
-    </div>
-  </div>
-</body>
-
-</html>
+{% block content %}
+<p>L'association de DJs, producteurs et ambianceurs de CentraleSupélec</p>
+<p>Que ce soit pour vos events associatifs, vos soirées en rez 2 ou vos apéros de campagne, nous sommes là pour
+  vous proposer des sessions de mix réalisées sur mesure pour ambiancer au mieux vos soirées.</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>14</p>
+<p>15</p>
+<p>16</p>
+<p>17</p>
+<p>18</p>
+<p>19</p>
+<p>20</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>14</p>
+<p>15</p>
+<p>16</p>
+<p>17</p>
+<p>18</p>
+<p>19</p>
+<p>20</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>14</p>
+<p>15</p>
+<p>16</p>
+<p>17</p>
+<p>18</p>
+<p>19</p>
+<p>20</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>14</p>
+<p>15</p>
+<p>16</p>
+<p>17</p>
+<p>18</p>
+<p>19</p>
+<p>20</p>
+{% endblock %}
