@@ -14,7 +14,6 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-print(BASE_DIR)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -30,14 +29,14 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-]
+INSTALLED_APPS = ['presta.apps.PrestaConfig',
+                  'django.contrib.admin',
+                  'django.contrib.auth',
+                  'django.contrib.contenttypes',
+                  'django.contrib.sessions',
+                  'django.contrib.messages',
+                  'django.contrib.staticfiles',
+                  ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -119,7 +118,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# this is the static files folder name which you created in django project root folder. This is different from above STATIC_URL. 
+# this is the static files folder name which you created in django project root folder. This is different from above STATIC_URL.
 STATICFILES_DIRS = [
     str(BASE_DIR)+'\static',
 ]
+
+DEFAULT_FROM_EMAIL = 'will@learndjango.com'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
