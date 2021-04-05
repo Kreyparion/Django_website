@@ -24,7 +24,7 @@ SECRET_KEY = '%uy3)n6m*yz88i4olr1yb+lmf658l#&-#5nye*ukhy*+r8v!nm'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [] #['cmix.fr', '127.0.0.1']
+ALLOWED_HOSTS = ['cmix.fr', '127.0.0.1']
 
 
 # Application definition
@@ -118,8 +118,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+<<<<<<< HEAD
 # this is the static files folder name which you created in django project root folder. This is different from above STATIC_URL. 
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+=======
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+>>>>>>> d0363d19da377d4d36b7de7946d1386b8fe72bce
 STATICFILES_DIRS = [
     str(BASE_DIR)+'\static',
 ]
