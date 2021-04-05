@@ -22,7 +22,7 @@ def contactView(request):
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect('presta:success')
-    return render(request, "presta/email.html", {'form': form})
+    return render(request, "email.html", {'form': form})
 
 
 def successView(request):
@@ -47,4 +47,4 @@ def get_name(request):
     else:
         form = PrestaForm()
 
-    return render(request, 'presta/name.html', {'form': form})
+    return render(request, 'name.html', {'form': form})
