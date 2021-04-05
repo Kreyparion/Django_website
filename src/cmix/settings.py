@@ -29,7 +29,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = ['forms.apps.FormsConfig', 'presta.apps.PrestaConfig',
+INSTALLED_APPS = ['presta.apps.PrestaConfig',
                   'django.contrib.admin',
                   'django.contrib.auth',
                   'django.contrib.contenttypes',
