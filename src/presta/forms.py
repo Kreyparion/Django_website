@@ -6,6 +6,9 @@ class PrestaForm(forms.ModelForm):
     class Meta:
         model = Presta
         exclude = ('pub_date',)
+        widgets = {
+            'presta_date': forms.DateInput(format=('%d/%m/%Y'), attrs={'class': 'form-control', 'placeholder': 'Select a date', 'type': 'date'}),
+        }
 
 
 '''

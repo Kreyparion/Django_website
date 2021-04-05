@@ -36,6 +36,7 @@
         <div class="col">
             <h1>CMIX</h1>
             <form action="{% url 'presta:name' %}" method="POST">
+
                 {% csrf_token %}
                 {% for field in form.visible_fields %}
                 <p>
@@ -44,6 +45,7 @@
                     {{ field }}
                 </p>
                 {% endfor %}
+
                 <input type="submit" value="Submit">
             </form>
 
