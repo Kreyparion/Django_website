@@ -19,6 +19,10 @@ from pages import views
 
 urlpatterns = [
     path('', views.home_view, name='home'),
+    path('home/', views.home_view, name='home'),
     path('admin/', admin.site.urls),
     path('presta/', include('presta.urls')),
+    path('reseaux/', views.reseaux_view, name='reseaux'),
+    path('medias/', views.medias_view, name='medias'),
+    path('playlist/', views.playlist_view, name='playlist'),
 ]

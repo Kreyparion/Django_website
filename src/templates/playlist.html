@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-{% load static %}
-
 <head>
   {% load static %}
   <title>CMIX</title>
@@ -33,23 +31,15 @@
 </header>
 
 <body>
-    <script src="{% static 'js/body_fade.js' %}"></script>
-    <div class="row">
-        <div class="col">
-            <h1>CMIX</h1>
-            <form method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <div class="form-actions">
-                    <button type="submit">Send</button>
-                </div>
-            </form>
-
-        </div>
-        <div class="col">
-            <!-- On a la place de mettre une autre boite de texte sur le coté-->
-        </div>
+  <script src="{% static 'js/body_fade.js' %}"></script>
+  <div class="row">
+    <div class="col">
+      <iframe src="https://open.spotify.com/embed/playlist/6AsYV4x3u0sKvzJTVPUsvT" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
+    <div class="col">
+      <iframe src="https://open.spotify.com/embed/playlist/2ZgcxXtSMo3wyzG02mzLdZ" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+  </div>
 </body>
 
 </html>
