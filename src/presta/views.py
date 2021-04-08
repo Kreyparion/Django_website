@@ -2,6 +2,8 @@ import datetime
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
+from django.urls import reverse
+from django.utils import timezone
 from .forms import ContactForm, PrestaForm
 from .models import Presta
 
@@ -35,9 +37,11 @@ def get_name(request):
         # check whether it's valid:
         if form.is_valid():
             # process the data in form.cleaned_data as required
-            form.save()
+            presta = form.save(commit=False)
+            presta.pub_date = timezone.now()
+            presta.save()
             # redirect to a new URL:
-            return HttpResponseRedirect('/thanks/')
+            return HttpResponseRedirect(reverse('presta:success'))
 
     # if a GET (or any other method) we'll create a blank form
     else:
