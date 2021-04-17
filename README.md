@@ -10,4 +10,4 @@
 ### En local
 
 * Cloner le repo `git@github.com:julcar99/CMix.git`
-* Lancer le serveur en local `python src/manage.py runserver`
+* Lancer le serveur en local `python3 src/manage.py runserver`
