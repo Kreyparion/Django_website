@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '%uy3)n6m*yz88i4olr1yb+lmf658l#&-#5nye*ukhy*+r8v!nm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['cmix.fr', '127.0.0.1']
 
