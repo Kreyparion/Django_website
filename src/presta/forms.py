@@ -9,14 +9,9 @@ class PrestaForm(forms.ModelForm):
         model = Presta
         exclude = ('pub_date',)
         widgets = {
-            # 'presta_date': forms.DateTimeInput(format=('%d/%m/%Y'), attrs={'class': 'form-control', 'placeholder': 'Select a date', 'type': 'date'}),
-            'presta_date': forms.DateTimeInput(format='%d/%m/%Y %H:%M', attrs={
-                'class': 'form-control', 'placeholder': 'Select Date', 'type': 'datetime-local'}),
-            # Il faudrait assurer que c'est plus grande que presta_date
-            'presta_end': forms.DateTimeInput(format='%d/%m/%Y %H:%M', attrs={
-                'class': 'form-control', 'placeholder': 'Select Date', 'type': 'datetime-local'}),
-            # 'presta_start': forms.Select(choices=HOUR_CHOICES),
-            # 'presta_end': forms.Select(choices=HOUR_CHOICES),
+            'presta_date': forms.DateInput(format=('%d %b, %Y'), attrs={'class': 'form-control', 'placeholder': 'Select a date', 'type': 'date'}),
+            'presta_start': forms.Select(choices=HOUR_CHOICES),
+            'presta_end': forms.Select(choices=HOUR_CHOICES),
         }
 
 
