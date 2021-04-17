@@ -20,12 +20,15 @@ class Presta(models.Model):
         'Lieu de Presta', max_length=200, default='')
     presta_respo = models.CharField(
         'Personne responsable', max_length=200, default='')
-    presta_respo_mail = models.EmailField('email respo', default='')
+    presta_respo_phone = models.CharField(
+        'Numéro Respo', max_length=15, default='')
+    presta_respo_mail = models.EmailField(
+        'email respo', default='', blank=True)
     presta_date = models.DateField('date de presta', default=datetime.now)
     presta_start = models.TimeField('Heure de Début', default=datetime.now)
     presta_end = models.TimeField('Heure de Fin', default=datetime.now)
     presta_comments = models.TextField(
-        'Commentaires Additionnels (Genres Musicales souhaitées, Lien de Playlist, etc.)', default='')
+        'Commentaires Additionnels', default='', blank=True)
     pub_date = models.DateTimeField(
         'date published', default=datetime.now)
 

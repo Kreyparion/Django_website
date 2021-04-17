@@ -9,10 +9,13 @@ class PrestaForm(forms.ModelForm):
         model = Presta
         exclude = ('pub_date',)
         widgets = {
+            'presta_name': forms.TextInput(attrs={'class': 'form-control'}),
             'presta_date': forms.DateInput(format=('%d %b, %Y'), attrs={'class': 'form-control', 'placeholder': 'Select a date', 'type': 'date'}),
             'presta_start': forms.Select(choices=HOUR_CHOICES),
             'presta_end': forms.Select(choices=HOUR_CHOICES),
         }
+        help_texts = {
+            'presta_comments': ' (Genres Musicales souhaitées, Lien de Playlist, etc.)', }
 
 
 '''

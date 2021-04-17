@@ -2,35 +2,40 @@
 
 {% block content %}
 {% load static %}
+
 <body>
   <link rel="stylesheet" href="{% static 'css/name.css' %}">
   <script src="{% static 'js/body_fade.js' %}"></script>
   <div style="margin:auto; width: 70%;" class="row">
-      <div class="col">
-          <h1>C-MIX</h1>
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-          <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <div class="col">
+      <h1>C-MIX</h1>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+      <form action="{% url 'presta:name' %}" method="POST">
 
-          <form action="{% url 'presta:name' %}" method="POST">
+        {% csrf_token %}
+        {% for field in form.visible_fields %}
+        <div class="fieldWrapper form-group" style="display:table-row;">
+          <label> {{ field.label }} {% if field.field.required %}<span class="required">*</span>{% endif %}</label>
 
-            {% csrf_token %}
-            {% for field in form.visible_fields %}
-           <p>
-              <label>{{ field.label }}</label>
-              <em>{{ field.help_text }}</em>
-             {{ field }}
-            </p>
-            {% endfor %}
+          {% if field.help_text %}
+          <p class="help" style="font-size:0.5rem;">{{ field.help_text|safe }}</p>
+          {% endif %}
 
-            <input type="submit" value="Submit">
-          </form>
+          {{ field }}
+        </div>
+        {% endfor %}
 
-      </div>
-      <div class="col">
-        <p> <br><br><br></p>
-        <p>Pour une soirée inoubliable, que ce soit pour une asso, un club, une FP, une soirée chill ou grandiose, envoyez votre demande ici en quelques clics !<br></p>
-        <p>Nous traiterons votre demande et nous vous recontacterons dans les plus brefs délais. </p>
-      </div>
+        <input type="submit" value="Submit">
+      </form>
+
+    </div>
+    <div class="col">
+      <p> <br><br><br></p>
+      <p>Pour une soirée inoubliable, que ce soit pour une asso, un club, une FP, une soirée chill ou grandiose, envoyez
+        votre demande ici en quelques clics !<br></p>
+      <p>Nous traiterons votre demande et nous vous recontacterons dans les plus brefs délais. </p>
+    </div>
   </div>
 </body>
 
