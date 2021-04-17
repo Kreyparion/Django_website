@@ -193,14 +193,14 @@ nav ul li a:hover::after{
 }
 
 .row{
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: auto;
+  width : 90%;
   display: flex;
   height: 88%;
   margin-top: 5vh;
 }
 .col{
-  flex-basis: 100%;
+  flex-basis: 90%;
 }
 h1{
   color: #ffff;

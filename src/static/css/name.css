@@ -1,3 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+a{
+	text-decoration: none;
+	color: #eee;
+}
+
 
 body{
 	width: 100%;
@@ -179,14 +193,17 @@ nav ul li a:hover::after{
 }
 
 .row{
-  margin-left: 10%;
-  margin-right: 5%;
+  margin-left: 5%;
+  margin-right: 10%;
   display: flex;
   height: 88%;
   margin-top: 20vh;
 }
 .col{
-  flex-basis: 60%;
+  flex-basis: 80%;
+}
+.center {
+	margin: auto;
 }
 h1{
   color: #ffff;

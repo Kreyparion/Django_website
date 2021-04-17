@@ -1,45 +1,22 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-<head>
-  {% load static %}
-  <title>CMIX</title>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="{% static 'css/reseaux.css' %}">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-</head>
-<header>
-  <script src="{% static 'js/navbar_shrink.js' %}"></script>
-  <div class="menu-toggle" id="hamburger">
-    <i class="fas fa-bars"></i>
-  </div>
-  <div class="overlay"></div>
-  <div class="container">
-    <nav id="navbar">
-      <a href='/home'>
-        <img src="{% static 'img/logocmix.png' %}" class="logo" id="logo">
-      </a>
-      <ul>
-        <li><a href="/presta/name/">Demander une presta</a></li>
-        <li><a href="/reseaux">Réseaux</a></li>
-        <li><a href="/medias">Médias</a></li>
-        <li><a href="/playlist">Playlist</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
 
 <body>
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
   <script src="{% static 'js/body_fade.js' %}"></script>
   <div class="row">
     <p> <br><br><br> </p>
   </div>
   <div class="row">
     <div class="col">
-      <h1>CMIX</h1>
+      <h1>C-MIX</h1>
       <p> <br></p>
-      <p>L'association de DJs, producteurs et ambianceurs de CentraleSupélec <br></p>
+      <p>Le club de DJs, producteurs et ambianceurs de CentraleSupélec. <br></p>
       <p>Que ce soit pour vos events associatifs, vos turn ups en rez 2 ou vos apéros de campagne, nous sommes là pour
         vous proposer des sessions de mix réalisées sur mesure pour ambiancer au mieux vos soirées.
       </p>
@@ -53,31 +30,21 @@
     <div class="col">
       <p> <br></p>
       <p>DJs émérites, mais pas seulement !<br><br>
-      <p>Notre pôle PROD forme actuellement les futurs producteurs qui feront bouger le campus, et prépare des projets
-        pour ravir vos oreilles<br></p>
-      <p>Si tu es intéressé.e, n'hésite pas à nous rejoindre sur Whatsapp !<br><br></p>
+      <p>Notre pôle PROD' forme actuellement les futurs producteurs qui feront bouger le campus, et prépare des projets
+        pour ravir vos oreilles !<br></p>
+      <p>Si tu es intéressé.e, n'hésite pas à nous rejoindre sur <a href= "https://chat.whatsapp.com/IEfOGmCMDBWKEVlf7Xsy5g"> WhatsApp</a> !<br><br> </p>
       <p>Toujours tourné vers le développement de manières innovantes de faire vivre la musique, nous lançons cette
         année le pôle LIVE !<br></p>
-      <p>De véritables shows, où nous construisons la musique à base de samples, de boucles, de synthés, de controleurs
+      <p>De véritables shows, où nous construisons la musique à base de samples, de boucles, de synthés, de contrôleurs
         MIDI...<br></p>
       <p>Plus d'infos arriveront prochainement !</p>
     </div>
   </div>
   <div class="row"></div>
   <div class="row"></div>
-  <div class="row"></div>
-  <div class="row"></div>
-  <div class="row"></div>
-  <div class="row"></div>
-  <div class="row">
-    <p>Proudly created by J, J & C</p>
-  </div>
-  <div class="row"></div>
-  <div class="row"></div>
-  <div class="row"></div>
-  <div class="row"></div>
-  <div class="row"></div>
-  <div class="row"></div>
+
 </body>
+
+{% endblock %}
 
 </html>

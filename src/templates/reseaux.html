@@ -1,36 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-<head>
-  {% load static %}
-  <title>CMIX</title>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="{% static 'css/reseaux.css' %}">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-</head>
-<header>
-  <script src="{% static 'js/navbar_shrink.js' %}"></script>
-  <div class="menu-toggle" id="hamburger">
-    <i class="fas fa-bars"></i>
-  </div>
-  <div class="overlay"></div>
-  <div class="container">
-    <nav id="navbar">
-      <a href='/home'>
-        <img src="{% static 'img/logocmix.png' %}" class="logo" id="logo">
-      </a>
-      <ul>
-        <li><a href="/presta/name/">Demander une presta</a></li>
-        <li><a href="/reseaux">Réseaux</a></li>
-        <li><a href="/medias">Médias</a></li>
-        <li><a href="/playlist">Playlist</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
 
 <body>
+  <link rel="stylesheet" href="{% static 'css/reseaux.css' %}">
   <script src="{% static 'js/body_fade.js' %}"></script>
   <div id="fb-root"></div>
   <script async defer crossorigin="anonymous"
@@ -53,5 +30,7 @@
     </div>
   </div>
 </body>
+
+{% endblock %}
 
 </html>
