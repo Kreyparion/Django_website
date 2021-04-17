@@ -3,8 +3,9 @@
 {% block content %}
 {% load static %}
 <body>
+  <link rel="stylesheet" href="{% static 'css/name.css' %}">
   <script src="{% static 'js/body_fade.js' %}"></script>
-  <div class="row">
+  <div style="margin:auto; width: 70%;" class="row">
       <div class="col">
           <h1>C-MIX</h1>
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -26,13 +27,9 @@
 
       </div>
       <div class="col">
-        <p> <br></p>
+        <p> <br><br><br></p>
         <p>Pour une soirée inoubliable, que ce soit pour une asso, un club, une FP, une soirée chill ou grandiose, envoyez votre demande ici en quelques clics !<br></p>
         <p>Nous traiterons votre demande et nous vous recontacterons dans les plus brefs délais. </p>
-
-      </div>
-      <div class="col">
-          <!-- On a la place de mettre une autre boite de texte sur le coté-->
       </div>
   </div>
 </body>
