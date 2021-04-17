@@ -26,3 +26,4 @@ urlpatterns = [
     path('medias/', views.medias_view, name='medias'),
     path('playlist/', views.playlist_view, name='playlist'),
 ]
+#Superuser : CMIXadmin2021 / Js1AIsstI@u2nG (Je suis 1 Admin I solemny swear that I @m up 2 no Good)
