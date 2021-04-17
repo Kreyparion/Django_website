@@ -1,34 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-<head>
-  {% load static %}
-  <title>C-MIX</title>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="{% static 'css/reseaux.css' %}">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-</head>
-<header>
-  <script src="{% static 'js/navbar_shrink.js' %}"></script>
-  <div class="menu-toggle" id="hamburger">
-    <i class="fas fa-bars"></i>
-  </div>
-  <div class="overlay"></div>
-  <div class="container">
-    <nav id="navbar">
-      <a href='/home'>
-        <img src="{% static 'img/logocmix.png' %}" class="logo" id="logo">
-      </a>
-      <ul>
-        <li><a href="/presta/name/">Demander une presta</a></li>
-        <li><a href="/reseaux">Réseaux</a></li>
-        <li><a href="/medias">Médias</a></li>
-        <li><a href="/playlist">Playlist</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
 
 <body>
   <script src="{% static 'js/body_fade.js' %}"></script>
@@ -37,7 +13,7 @@
   </div>
   <div class="row">
     <div class="col">
-      <h1>CMIX</h1>
+      <h1>C-MIX</h1>
       <p> <br></p>
       <p>Le club de DJs, producteurs et ambianceurs de CentraleSupélec. <br></p>
       <p>Que ce soit pour vos events associatifs, vos turn ups en rez 2 ou vos apéros de campagne, nous sommes là pour
@@ -69,15 +45,8 @@
   <div class="row"></div>
   <div class="row"></div>
   <div class="row"></div>
-  <div class="row">
-    <p>Proudly created by J, J & C</p>
-  </div>
-  <div class="row"></div>
-  <div class="row"></div>
-  <div class="row"></div>
-  <div class="row"></div>
-  <div class="row"></div>
-  <div class="row"></div>
 </body>
+
+{% endblock %}
 
 </html>

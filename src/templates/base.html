@@ -29,18 +29,7 @@
     </div>
 </header>
 
-<body>
-    <script src="{% static 'js/body_fade.js' %}"></script>
-    <div class="row">
-        <div class="col">
-            <h1>C-MIX</h1>
-            {% block content %}
-            {% endblock %}
-        </div>
-        <div class="col">
-            <!-- On a la place de mettre une autre boite de texte sur le coté-->
-        </div>
-    </div>
-</body>
+{% block content %}
+{% endblock %}
 
 </html>
