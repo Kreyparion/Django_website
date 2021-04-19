@@ -32,12 +32,12 @@
 - renommer le fichier static en static_comp
 - changer dans  var/www/Cmix/src/cmix/settings.py
 ```
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATIC_ROOT = os.path.join(BASE_DIR, '/static/')
 STATICFILES_DIRS = [
 str(BASE_DIR)+'/static_comp/',
 ]
 ```
-- mettre les static `python3 manage.py colectstatic`
+- mettre les static `python3 manage.py collectstatic`
 
 ### lancer gunicorn
 
