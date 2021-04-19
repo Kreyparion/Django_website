@@ -9,7 +9,7 @@
 
 ### En local
 
-* Cloner le repo `git clone git@github.com:julcar99/CMix.git`
+* Cloner le repo `sudo git clone https://github.com/julcar99/CMix.git`
 * Lancer le serveur en local `python3 src/manage.py runserver`
 
 ## Sur une VM
