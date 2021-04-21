@@ -14,9 +14,11 @@
 
 ## Sur une VM
 
+Clone dans var/www le repo distant en https `git clone https://github.com/julcar99/CMix.git`
+
 ### Configurer un Virtualenv
 
-* Installer la librairie python : `pip3 install virtualenv`
+* Installer la librairie python : `pip3 install virtualenv` ou `sudo apt-get install python3-venv`
 * Créer le venv à la racine dans le dossier CMix `(sudo) python3 -m venv .env`
 * lancer le venv  `source .env/bin/activate`
 * accéder à pip sans droits root [doc]( https://stackoverflow.com/questions/19471972/how-to-avoid-permission-denied-when-using-pip-with-virtualenv )`sudo chown -R your_username:your_username path/to/virtuaelenv/` 
@@ -28,7 +30,6 @@
 
 ### Configurer le repo
 
-- Clone dans var/www le repo distant en https `git clone https://github.com/julcar99/CMix.git`
 - renommer le fichier static en static_comp
 - changer dans  var/www/Cmix/src/cmix/settings.py
 ```
