@@ -36,6 +36,7 @@ INSTALLED_APPS = [  'presta.apps.PrestaConfig',
                     'django.contrib.sessions',
                     'django.contrib.messages',
                     'django.contrib.staticfiles',
+                    'bootstrap4',
                   ]
 
 MIDDLEWARE = [

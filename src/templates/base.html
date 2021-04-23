@@ -1,31 +1,135 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     {% load static %}
     <title>CMIX</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        
+    <link rel="stylesheet" href="{% static 'css/bootstrap-iso.css' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+
 </head>
 <header>
     <script src="{% static 'js/navbar_shrink.js' %}"></script>
     <div class="menu-toggle" id="hamburger">
         <i class="fas fa-bars"></i>
     </div>
-    <div class="overlay"></div>
-    <div class="container">
-        <nav id="navbar">
-            <a id='short' href='/'><img src="{% static 'img/logocmix.png' %}" class="logo" id="logo"></a>
-            <!--<img src="{% static 'img/logocmix.png' %}" class="logo" id="logo">-->
-            <ul>
-                <li><a href="/presta/name/">Demander une presta</a></li>
-                <li><a href="/reseaux">Réseaux</a></li>
-                <li><a href="/medias">Médias</a></li>
-                <li><a href="/playlist">Playlist</a></li>
-            </ul>
-        </nav>
+    <div class="overlay" style="background-color: rgba(0,0,0,.95);
+                                position: fixed;
+                                right: 0;
+                                left: 0;
+                                top: 0;
+                                bottom: 0;
+                                transition: opacity 650ms;
+                                transform: scale(0);
+                                opacity: 0;
+                            display: none;"></div>
+    
+    <div class="bootstrap-iso" >
+        <div class="container">
+            <style>
+                
+                nav div{
+                    padding-top: 3rem;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    text-transform: uppercase;
+                    font-size: 1.2rem;
+                    transition: 0.4s;
+                }
+                nav div ul li{
+                    list-style: none;
+                    transform: translateX(100rem);
+                    animation: slideIn .5s forwards;
+                }
+
+                nav div ul li:nth-child(1){
+                    animation-delay: 0s;
+                }
+
+                nav div ul li:nth-child(2){
+                    animation-delay: .2s;
+                }
+
+                nav div ul li:nth-child(3){
+                    animation-delay: .4s;
+                }
+
+                nav div ul li:nth-child(4){
+                    animation-delay: .6s;
+                }
+
+                nav div ul li a{
+                    padding: 1rem 0;
+                    margin: 0 3rem;
+                    position: relative;
+                    letter-spacing: 2px;
+                }
+
+                nav div ul li a:last-child{
+                    margin-right: 0;
+                }
+
+                nav div ul li a::before,
+                nav div ul li a::after{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    background-color: crimson;
+                    left: 0;
+                    transform: scaleX(0);
+                    transition: all .5s;
+                }
+
+                nav div ul li a::before{
+                    top: 0;
+                    transform-origin: left;
+                }
+
+                nav div ul li a::after{
+                    bottom: 0;
+                    transform-origin: right;
+                }
+
+                .overlay{
+                    background-color: rgba(0,0,0,.95);
+                    position: fixed;
+                    right: 0;
+                    left: 0;
+                    top: 0;
+                    bottom: 0;
+                    transition: opacity 650ms;
+                    transform: scale(0);
+                    opacity: 0;
+                display: none;
+                }
+
+                nav div ul li a:hover::before,
+                nav div ul li a:hover::after{
+                    transform: scaleX(1);
+                }
+
+            </style>
+            <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark" style="width: 90%; margin: auto; padding-top: 3rem;">
+                <a id='short' href='/' class="navbar-brand"><img src="{% static 'img/logocmix.png' %}" class="logo" id="logo"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav text-right" style="display: flex; align-items: flex-end; justify-content: space-evenly;">
+                        <li class="nav-item" style="display: flex; justify-content: flex-end;margin-left: 20px;"><a class="nav-link" href="/presta/name/" style="text-decoration: none; margin: auto; color: #eee;">Demander une presta</a></li>
+                        <li class="nav-item" style="display: flex; justify-content: flex-end;margin-left: 20px;"><a class="nav-link" href="/reseaux" style="text-decoration: none; margin: auto; color: #eee;">Réseaux</a></li>
+                        <li class="nav-item" style="display: flex; justify-content: flex-end;margin-left: 20px;"><a class="nav-link" href="/medias" style="text-decoration: none; margin: auto; color: #eee;">Médias</a></li>
+                        <li class="nav-item" style="display: flex; justify-content: flex-end;margin-left: 20px;"><a class="nav-link" href="/playlist" style="text-decoration: none; margin: auto; color: #eee;">Playlist</a></li>
+                    </ul>
+                </div>
+            </nav> 
+        </div>
     </div>
 </header>
 

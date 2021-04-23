@@ -187,3 +187,8 @@ nav ul li a:hover::after{
   }
   
 }
+@media screen and (max-width: 768px){
+	.header{
+		margin-bottom:120px;
+	}
+}
