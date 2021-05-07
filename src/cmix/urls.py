@@ -16,14 +16,24 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from pages import views
+from django.contrib.sitemaps.views import sitemap
+from .sitemaps import StaticViewSitemap
+
+sitemaps = {
+    'static': StaticViewSitemap,
+}
+
+
+
 
 urlpatterns = [
     path('', views.home_view, name='home'),
     path('home/', views.home_view, name='home'),
     path('administration_login/', admin.site.urls),
-    path('presta/', include('presta.urls')),
+    path('presta/', include('presta.urls'), name='presta'),
     path('reseaux/', views.reseaux_view, name='reseaux'),
     path('medias/', views.medias_view, name='medias'),
     path('playlist/', views.playlist_view, name='playlist'),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
 ]
 #Superuser : CMIXadmin2021 / Js1AIsstI@u2nG (Je suis 1 Admin I solemny swear that I @m up 2 no Good)
