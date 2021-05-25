@@ -47,3 +47,10 @@ str(BASE_DIR)+'/static_comp/',
 sudo systemctl start gunicorn
 sudo systemctl enable gunicorn
 ```
+* Parfois, commandes à exécuter pour prendre en compte les changements dans settings.py
+```
+sudo systemctl daemon-reload
+sudo systemctl restart gunicorn
+```
+
+Voir [tuto]( https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-16-04 ) bien détaillé
