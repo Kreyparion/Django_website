@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+<body>
+    <link rel="stylesheet" href="{% static 'css/name.css' %}">
+    <script src="{% static 'js/body_fade.js' %}"></script>
+    <div style="margin:auto; width: 70%; display: flex;flex-wrap: wrap; justify-content: flex-start;" class="row">
+        <h2> Merci pour ta demande ! </h2>
+        <p> On reviendra vers toi au plus vite pour connaître le reste de détails !</p>
+    </div>
+</body>
+
+{% endblock %}

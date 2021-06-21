@@ -17,3 +17,7 @@ def medias_view(request, *args, **kwargs):
 
 def playlist_view(request, *args, **kwargs):
     return render(request, "playlist.html", {})
+
+
+def error404_view(request, *args, **kwargs):
+    return render(request, "404.html", {})

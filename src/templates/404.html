@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+<body>
+    <link rel="stylesheet" href="{% static 'css/name.css' %}">
+    <script src="{% static 'js/body_fade.js' %}"></script>
+    <div style="margin:auto; width: 70%; display: flex;flex-wrap: wrap; justify-content: flex-start;" class="row">
+        <h1> Oh No ! (Error 404) </h1>
+        <h2> On n'a pas pu retrouver la page que tu cherchais ! </h2>
+        <p> Essaie de revenir en arrière ou d'aller dans un onglet différent.</p>
+    </div>
+</body>
+
+{% endblock %}

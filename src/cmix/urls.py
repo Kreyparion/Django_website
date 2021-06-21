@@ -23,8 +23,7 @@ sitemaps = {
     'static': StaticViewSitemap,
 }
 
-
-
+handler404 = 'pages.views.error404_view'
 
 urlpatterns = [
     path('', views.home_view, name='home'),
@@ -34,6 +33,7 @@ urlpatterns = [
     path('reseaux/', views.reseaux_view, name='reseaux'),
     path('medias/', views.medias_view, name='medias'),
     path('playlist/', views.playlist_view, name='playlist'),
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps},
+         name='django.contrib.sitemaps.views.sitemap'),
 ]
-#Superuser : CMIXadmin2021 / Js1AIsstI@u2nG (Je suis 1 Admin I solemny swear that I @m up 2 no Good)
+# Superuser : CMIXadmin2021 / Js1AIsstI@u2nG (Je suis 1 Admin I solemny swear that I @m up 2 no Good)

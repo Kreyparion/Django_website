@@ -23,22 +23,23 @@ SECRET_KEY = '%uy3)n6m*yz88i4olr1yb+lmf658l#&-#5nye*ukhy*+r8v!nm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# DEBUG = False # Il faut ca pour voir la bonne page d'erreur 404
 
 ALLOWED_HOSTS = ['cmix.fr', '127.0.0.1']
 
 
 # Application definition
 
-INSTALLED_APPS = [  'presta.apps.PrestaConfig',
-                    'django.contrib.admin',
-                    'django.contrib.auth',
-                    'django.contrib.contenttypes',
-                    'django.contrib.sessions',
-                    'django.contrib.messages',
-                    'django.contrib.staticfiles',
-                    'django.contrib.sites',
-                    'django.contrib.sitemaps',
-                    'bootstrap4',
+INSTALLED_APPS = ['presta.apps.PrestaConfig',
+                  'django.contrib.admin',
+                  'django.contrib.auth',
+                  'django.contrib.contenttypes',
+                  'django.contrib.sessions',
+                  'django.contrib.messages',
+                  'django.contrib.staticfiles',
+                  'django.contrib.sites',
+                  'django.contrib.sitemaps',
+                  'bootstrap4',
                   ]
 SITE_ID = 1
 
@@ -129,4 +130,10 @@ STATICFILES_DIRS = [
 
 
 DEFAULT_FROM_EMAIL = 'will@learndjango.com'
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = "holaholaalo131369@gmail.com"
+EMAIL_HOST_PASSWORD = 'aloha420'
+EMAIL_PORT = '587'

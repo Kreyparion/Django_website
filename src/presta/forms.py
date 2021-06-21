@@ -15,7 +15,7 @@ class PrestaForm(forms.ModelForm):
             'presta_end': forms.Select(choices=HOUR_CHOICES),
         }
         help_texts = {
-            'presta_comments': ' (Genres Musicales souhaitées, Lien de Playlist, etc.)', }
+            'presta_comments': ' (Genres Musicaux souhaitées, Lien de Playlist, etc.)', }
 
 
 '''
