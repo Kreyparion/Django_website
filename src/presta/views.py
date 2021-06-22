@@ -1,9 +1,11 @@
 import datetime
+import pandas as pd
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from django.utils import timezone
+from django.template import loader
 from cmix import settings
 from .forms import ContactForm, PrestaForm
 from .models import Presta
@@ -54,3 +56,23 @@ def get_name(request):
         form = PrestaForm()
 
     return render(request, 'name.html', {'form': form})
+
+
+def list_prestas(request):
+    latest_prestas_list = Presta.objects.order_by('-pub_date')[:5]
+    context = {'latest_prestas_list': latest_prestas_list}
+    return render(request, 'list_prestas.html', context)
+
+
+def details_prestas(request, presta_id):
+    presta = get_object_or_404(Presta, pk=presta_id)
+    date = presta.presta_date
+    date = datetime.datetime(date.year, date.month, date.day, 0, 0)
+    start = presta.presta_start
+    start = date.replace(hour=start.hour, minute=0)
+    end = presta.presta_end
+    end = date.replace(hour=end.hour, minute=0)
+    if start.hour > end.hour:
+        end += datetime.timedelta(days=1)
+    rango = pd.date_range(start=start, end=end, freq="30min")
+    return render(request, 'details_presta.html', {'presta': presta, 'range': rango})

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+<body>
+    <link rel="stylesheet" href="{% static 'css/name.css' %}">
+    <script src="{% static 'js/body_fade.js' %}"></script>
+    <div style="margin:auto; width: 70%; display: flex;flex-wrap: wrap; justify-content: flex-start;" class="row">
+        <h2> Dernières Demandes de Presta </h2>
+    </div>
+    <div style="margin:auto; width: 70%; display: flex;flex-wrap: wrap; justify-content: flex-start;" class="row">
+        {% if latest_prestas_list %}
+        <ul>
+            {% for presta in latest_prestas_list %}
+            <li><a href="{% url 'presta:details_prestas' presta.id %}">{{ presta.presta_name }}</a></li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>Aucune demande de presta </p>
+        {% endif %}
+    </div>
+</body>
+
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/presta_details.css' %}">
+
+<body>
+    <link rel="stylesheet" href="{% static 'css/name.css' %}">
+    <script src="{% static 'js/body_fade.js' %}"></script>
+    <div style="margin:auto; width: 70%; display: flex;flex-wrap: wrap; justify-content: flex-start;" class="row">
+        <h1>Presta {{ presta.presta_name }} - {{ presta.presta_type }}</h1>
+        <p> <br><br><br></p>
+    </div>
+    <div style="margin:auto; width: 70%; display: flex;flex-wrap: wrap; justify-content: flex-start;" class="row">
+        <div class="col" style="flex: 1;">
+            <h3> Demande faite par {{ presta.presta_respo }} le {{ presta.pub_date }}.</h3>
+            <h2>Contact: {{ presta.presta_respo_phone }},
+                {{presta.presta_respo_mail }}</h2>
+            <h2>Lieu: {{ presta.presta_place }}</h2>
+            <h3>Commentaires: {{presta.presta_comments }}</h3>
+            <span
+                class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-top text-white font-size16 xs-font-size13">Dance</span>
+        </div>
+        <div class="col" style="flex: 1 0 200px;">
+            <div class="container">
+                <div class="timetable-img text-center">
+                    <img src="img/content/timetable.png" alt="">
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-bordered text-center">
+                        <thead>
+                            <tr class="align-middle bg-purple">
+                                <th class="text-uppercase text-light-gray">Time
+                                </th>
+                                <th class="text-uppercase text-light-gray">Monday</th>
+                                <th class="text-uppercase text-light-gray">Tuesday</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for hora in range %}
+                            <tr class="align-middle bg-black">
+                                <td class="align-middle text-light-gray">
+                                    <div class="font-size14 text-light-gray font-size16">{{ hora}}
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="font-size14 text-light-gray">Julien Cardinal</div>
+                                </td>
+                                <td>
+                                    <div class="font-size14 text-light-gray">Clément Chardine</div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+{% endblock %}
